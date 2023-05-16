@@ -438,7 +438,8 @@
 
 			var heightHead = $('body .header').outerHeight();
 			$('body').css('padding-top', heightHead + 'px');
-			$(".js-footer-toggle__left, .go-form").click(function() {
+			$(".js-footer-toggle__left, .go-form").click(function(e) {
+				e.preventDefault();
 				var heightHeader = $('body .header').outerHeight();
 			  
 				  $('html, body').animate({

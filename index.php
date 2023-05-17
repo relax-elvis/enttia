@@ -85,25 +85,25 @@
 							<p class="subtitle">
 								Consúltenos sin compromiso y le ofreceremos la solución que mejor se adapte a su negocio.
 							</p>
-							<form action="" method="POST">
+							<form action="gracias.php" id="contactForm" method="post">
 								<div class="field">
 									<div class="group">
 										<div class="item">
-											<input type="text" name="name" placeholder="Nombre" required="">
+											<input type="text" name="name" id="name" value="" placeholder="Nombre" required  data-msg-required="Dinos un nombre, por favor" class="form-control" />
 										</div>
 										<div class="item">
-											<input type="tel" name="phone" placeholder="Teléfono" required="">
+											<input type="text" name="subject" id="subject" value="" placeholder="Teléfono" required data-msg-required="Debes indicarnos tu teléfono"  class="form-control"/>
 										</div>
 									</div>
 								</div>
 								<div class="field">
 									<div class="item">
-										<input type="email" name="email" placeholder="Correo electrónico" required="">
+										<input type="email" name="email" id="email" value="" placeholder="Correo electrónico"  data-msg-required="Debes indicarnos tu e-mail" data-msg-email="Introduce una dirección de correo válida" class="form-control" />
 									</div>
 								</div>
 								<div class="field">
 									<div class="item">
-										<textarea type="text" name="comment" placeholder="Comentarios" required=""></textarea>
+										<textarea name="message" id="message" value="" placeholder="Comentarios"  data-msg-required="Introduce un mensaje" class="form-control"></textarea>
 									</div>
 								</div>
 								<div class="field block_politico">
@@ -113,7 +113,7 @@
 											He leído y acepto las <a href="https://www.enttia.es/aviso-legal.php">Condiciones legales</a>
 										</span>
 									</label>
-									<button class="btn btn-orange" type="submit">Solicitar Información</button>
+									<button class="btn btn-orange" id="check" type="submit" data-loading-text="Enviando...">Solicitar Información</button>
 								</div>
 							</form>
 						</div>
@@ -450,7 +450,10 @@
 			<i class="fas fa-phone"></i>
 		</a>
 	</div>
+	
 	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+	<script src="js/jquery.validate.js"></script>
+	<script src="https://www.enttia.es/js/view.contact.js"></script>
 	<script>
 		function f_scroll() {
 
